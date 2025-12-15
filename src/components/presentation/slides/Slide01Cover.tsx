@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import uniteLogo from "@/assets/unite-logo.png";
+import uniteLogo from "@/assets/unite-logo-white.svg";
 import cciLogo from "@/assets/cci-logo.png";
 
 interface Slide01CoverProps {
@@ -24,7 +24,7 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 md:px-6 py-12 md:py-20">
         <div className="animate-fade-in space-y-6 md:space-y-8 max-w-4xl">
           {/* Logos */}
-          <div className="flex items-center gap-4 md:gap-8">
+          <div className="flex items-center justify-center gap-4 md:gap-8">
             <div className="bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
               <img src={uniteLogo} alt="Unite Solar" className="h-8 md:h-12 w-auto" />
             </div>
