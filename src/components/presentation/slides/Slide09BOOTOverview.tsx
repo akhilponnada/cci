@@ -1,4 +1,4 @@
-import { Calendar, DollarSign, Key, Clock, TrendingUp, Zap } from "lucide-react";
+import { Calendar, Building2, Sun, Key, Clock, TrendingUp, Zap, Wallet } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
@@ -8,23 +8,23 @@ const calculateSavings = () => {
   const initialTariff = 8; // ₹8 per unit current tariff
   const ppaRate = 5; // ₹5 per unit PPA rate (for BOOT model during contract)
   const annualHike = 0.03; // 3% annual hike
-  
+
   let totalGridCost = 0;
   let totalSolarCost = 0;
   let totalSavings = 0;
   const yearlyData = [];
-  
+
   for (let year = 1; year <= 30; year++) {
     const tariff = initialTariff * Math.pow(1 + annualHike, year - 1);
     const gridCost = annualUnits * tariff;
     // After 6 years, solar is free (only O&M costs ~₹0.50/unit)
     const solarCost = year <= 6 ? annualUnits * ppaRate : annualUnits * 0.5;
     const savings = gridCost - solarCost;
-    
+
     totalGridCost += gridCost;
     totalSolarCost += solarCost;
     totalSavings += savings;
-    
+
     if (year % 5 === 0 || year === 1 || year === 6) {
       yearlyData.push({
         year: `Yr ${year}`,
@@ -35,7 +35,7 @@ const calculateSavings = () => {
       });
     }
   }
-  
+
   return {
     totalGridCost: Math.round(totalGridCost / 10000000), // in Cr
     totalSolarCost: Math.round(totalSolarCost / 10000000),
@@ -48,7 +48,7 @@ const calculateSavings = () => {
 const savingsData = calculateSavings();
 
 const keyTerms = [
-  { icon: DollarSign, label: "Investment", value: "100% by Unite Solar" },
+  { icon: Wallet, label: "Investment", value: "100% by Unite Solar" },
   { icon: Calendar, label: "Contract Period", value: "6 Years" },
   { icon: Key, label: "Ownership Transfer", value: "End of Year 6" },
   { icon: Clock, label: "Commissioning", value: "Within 12 Months" },
@@ -97,14 +97,14 @@ const Slide09BOOTOverview = () => {
           </Card>
           <Card className="border-destructive/30 bg-destructive/5">
             <CardContent className="p-3 md:p-5 text-center">
-              <DollarSign className="w-6 h-6 md:w-8 md:h-8 text-destructive mx-auto mb-2" />
+              <Building2 className="w-6 h-6 md:w-8 md:h-8 text-destructive mx-auto mb-2" />
               <div className="text-xl md:text-3xl font-display font-bold text-destructive">₹{savingsData.totalGridCost}</div>
               <div className="text-[10px] md:text-sm text-muted-foreground">Cr Grid Cost (30 Yrs)</div>
             </CardContent>
           </Card>
           <Card className="border-solar-blue/30 bg-solar-blue/5">
             <CardContent className="p-3 md:p-5 text-center">
-              <DollarSign className="w-6 h-6 md:w-8 md:h-8 text-solar-blue mx-auto mb-2" />
+              <Sun className="w-6 h-6 md:w-8 md:h-8 text-solar-blue mx-auto mb-2" />
               <div className="text-xl md:text-3xl font-display font-bold text-solar-blue">₹{savingsData.totalSolarCost}</div>
               <div className="text-[10px] md:text-sm text-muted-foreground">Cr Solar Cost (30 Yrs)</div>
             </CardContent>
@@ -130,29 +130,29 @@ const Slide09BOOTOverview = () => {
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
                   <XAxis dataKey="year" tick={{ fontSize: 10 }} stroke="hsl(var(--muted-foreground))" />
                   <YAxis tick={{ fontSize: 10 }} stroke="hsl(var(--muted-foreground))" />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'hsl(var(--card))', 
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'hsl(var(--card))',
                       border: '1px solid hsl(var(--border))',
                       borderRadius: '8px',
                       fontSize: '12px'
-                    }} 
+                    }}
                   />
                   <Legend wrapperStyle={{ fontSize: '10px' }} />
-                  <Area 
-                    type="monotone" 
-                    dataKey="gridCost" 
+                  <Area
+                    type="monotone"
+                    dataKey="gridCost"
                     stackId="1"
-                    stroke="hsl(var(--destructive))" 
-                    fill="hsl(var(--destructive)/0.3)" 
+                    stroke="hsl(var(--destructive))"
+                    fill="hsl(var(--destructive)/0.3)"
                     name="Grid Cost"
                   />
-                  <Area 
-                    type="monotone" 
-                    dataKey="cumulativeSavings" 
+                  <Area
+                    type="monotone"
+                    dataKey="cumulativeSavings"
                     stackId="2"
-                    stroke="hsl(var(--solar-green))" 
-                    fill="hsl(var(--solar-green)/0.5)" 
+                    stroke="hsl(var(--solar-green))"
+                    fill="hsl(var(--solar-green)/0.5)"
                     name="Cumulative Savings"
                   />
                 </AreaChart>
@@ -164,7 +164,7 @@ const Slide09BOOTOverview = () => {
         {/* Bottom Note */}
         <div className="text-center p-3 md:p-4 bg-secondary rounded-xl">
           <p className="text-xs md:text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">Assumptions:</span> 30 Million units/year • ₹8/unit current tariff • 3% annual hike • 
+            <span className="font-semibold text-foreground">Assumptions:</span> 30 Million units/year • ₹8/unit current tariff • 3% annual hike •
             After Year 6, only O&M costs (~₹0.50/unit) • <span className="text-solar-green font-semibold">30+ years plant life</span>
           </p>
         </div>

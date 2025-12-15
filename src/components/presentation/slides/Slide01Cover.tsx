@@ -11,7 +11,7 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
   return (
     <div className="min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-7.5rem)] relative overflow-hidden">
       {/* Background Image Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80')`,
@@ -46,7 +46,7 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
               Feasibility Assessment & Commercial Models
             </p>
             <p className="text-sm md:text-lg text-primary-foreground/80">
-              For <span className="font-semibold">CCI – Thandur Plant</span>
+              For <span className="font-semibold">CCI – Tandur Plant</span>
             </p>
           </div>
 

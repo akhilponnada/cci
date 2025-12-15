@@ -44,7 +44,7 @@ const Slide04LandAvailability = () => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
           {/* Left - Visual */}
           <div className="relative">
-            <div 
+            <div
               className="h-56 md:h-80 rounded-xl md:rounded-2xl bg-cover bg-center"
               style={{
                 backgroundImage: `url(${cciIndustry})`,
@@ -56,7 +56,7 @@ const Slide04LandAvailability = () => {
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-lg md:text-2xl font-bold text-foreground">CCI Thandur</div>
+                  <div className="text-lg md:text-2xl font-bold text-foreground">CCI Tandur</div>
                   <div className="text-xs md:text-sm text-muted-foreground">Project Location</div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const Slide04LandAvailability = () => {
           {/* Right - Details */}
           <div className="space-y-4 md:space-y-6 mt-4 lg:mt-0">
             {landDetails.map((detail) => (
-              <Card 
+              <Card
                 key={detail.label}
                 className="border-border bg-card hover:shadow-md transition-shadow"
               >
@@ -90,7 +90,7 @@ const Slide04LandAvailability = () => {
         {/* Bottom Note */}
         <div className="text-center p-4 md:p-6 bg-secondary rounded-xl">
           <p className="text-xs md:text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">Note:</span> Land utilization follows 
+            <span className="font-semibold text-foreground">Note:</span> Land utilization follows
             industry-standard 4-5 acres per MW for ground-mounted solar installations.
           </p>
         </div>

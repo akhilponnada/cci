@@ -37,16 +37,23 @@ const Slide12PPAOverview = () => {
               </div>
 
               {/* Arrow with Agreement */}
-              <div className="flex flex-col items-center justify-center">
-                <div className="w-full h-1 bg-gradient-to-r from-primary to-solar-blue rounded-full relative">
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-center">
-                    <FileText className="w-8 h-8 text-solar-blue mx-auto mb-2" />
-                    <span className="text-sm font-medium text-foreground">25-Year PPA</span>
+              <div className="flex flex-col items-center justify-center space-y-4">
+                {/* Agreement Badge */}
+                <div className="bg-gradient-to-br from-primary/10 to-solar-blue/10 border border-primary/20 rounded-2xl p-6 text-center">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-solar-blue flex items-center justify-center mx-auto mb-3">
+                    <FileText className="w-7 h-7 text-primary-foreground" />
                   </div>
-                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-center">
-                    <span className="text-sm text-muted-foreground">Power Supply</span>
-                    <div className="text-lg font-bold text-primary">@ 26% Discount</div>
+                  <div className="text-lg font-bold text-foreground mb-1">25-Year PPA</div>
+                  <div className="text-sm text-muted-foreground mb-2">Power Supply Agreement</div>
+                  <div className="inline-block px-4 py-1.5 bg-primary/10 rounded-full">
+                    <span className="text-lg font-bold text-primary">@ 26% Discount</span>
                   </div>
+                </div>
+                {/* Arrow lines */}
+                <div className="flex items-center gap-2 w-full">
+                  <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-primary to-primary rounded-full"></div>
+                  <div className="text-xs text-muted-foreground">⟷</div>
+                  <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent via-solar-blue to-solar-blue rounded-full"></div>
                 </div>
               </div>
 
@@ -55,7 +62,7 @@ const Slide12PPAOverview = () => {
                 <div className="w-20 h-20 rounded-2xl bg-solar-blue flex items-center justify-center mx-auto">
                   <Building className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <h3 className="font-semibold text-foreground text-xl">CCI Thandur</h3>
+                <h3 className="font-semibold text-foreground text-xl">CCI Tandur</h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p>• Consumes power</p>
                   <p>• Zero investment</p>
@@ -110,7 +117,7 @@ const Slide12PPAOverview = () => {
         {/* Bottom Highlight */}
         <div className="text-center p-6 bg-solar-blue/10 rounded-xl">
           <p className="text-muted-foreground">
-            <span className="font-semibold text-foreground">Simple Model:</span> CCI pays only for the 
+            <span className="font-semibold text-foreground">Simple Model:</span> CCI pays only for the
             power consumed at a discounted rate. Unite Solar handles everything else for 25 years.
           </p>
         </div>

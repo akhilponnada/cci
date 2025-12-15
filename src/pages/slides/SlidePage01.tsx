@@ -10,7 +10,7 @@ const SlidePage01 = () => {
     <SlideLayout currentSlide={1} totalSlides={20}>
       <div className="min-h-[calc(100vh-7.5rem)] relative overflow-hidden">
         {/* Background Image Overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80')`,
@@ -23,11 +23,10 @@ const SlidePage01 = () => {
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 py-20">
           <div className="animate-fade-in space-y-8 max-w-4xl">
             {/* Logos */}
-            <div className="flex items-center gap-4 md:gap-8">
-              <div className="bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
-                <img src={uniteLogo} alt="Unite Solar" className="h-8 md:h-12 w-auto" />
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl px-3 md:px-4 py-2 md:py-3">
+            <div className="flex items-center justify-center">
+              <div className="bg-white rounded-xl px-6 md:px-8 py-3 md:py-4 flex items-center gap-6 md:gap-10 shadow-lg">
+                <img src={uniteLogo} alt="Unite Solar" className="h-10 md:h-14 w-auto" />
+                <div className="w-px h-10 md:h-14 bg-gray-300" />
                 <img src={cciLogo} alt="CCI" className="h-10 md:h-14 w-auto" />
               </div>
             </div>
@@ -45,7 +44,7 @@ const SlidePage01 = () => {
                 Feasibility Assessment & Commercial Models
               </p>
               <p className="text-lg text-primary-foreground/80">
-                For <span className="font-semibold">CCI – Thandur Plant</span>
+                For <span className="font-semibold">CCI – Tandur Plant</span>
               </p>
             </div>
 

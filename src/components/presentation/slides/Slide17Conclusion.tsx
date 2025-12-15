@@ -23,7 +23,7 @@ const Slide17Conclusion = () => {
   return (
     <div className="min-h-[calc(100vh-7.5rem)] px-6 py-12 relative">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{ backgroundImage: `url(${cciFactory})` }}
       />
@@ -48,7 +48,7 @@ const Slide17Conclusion = () => {
               <h3 className="text-xl font-semibold text-foreground mb-6">Key Takeaways</h3>
               <div className="space-y-4">
                 {keyTakeaways.map((takeaway, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-start gap-3 p-3 bg-secondary rounded-lg"
                   >
@@ -66,7 +66,7 @@ const Slide17Conclusion = () => {
               <h3 className="text-xl font-semibold text-foreground mb-6">Proposed Next Steps</h3>
               <div className="space-y-4">
                 {nextSteps.map((item) => (
-                  <div 
+                  <div
                     key={item.step}
                     className="flex items-start gap-4 p-3"
                   >
@@ -91,12 +91,12 @@ const Slide17Conclusion = () => {
               Ready to Transform Your Energy Future?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Unite Solar is committed to delivering a world-class solar solution for CCI Thandur. 
+              Unite Solar is committed to delivering a world-class solar solution for CCI Tandur.
               Let's discuss the next steps to make this project a reality.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-primary hover:bg-primary/90 gap-2"
                 asChild
               >
@@ -105,8 +105,8 @@ const Slide17Conclusion = () => {
                   Call: 9667660773
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="gap-2"
                 asChild
